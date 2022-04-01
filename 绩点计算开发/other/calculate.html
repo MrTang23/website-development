@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate</title>
+</head>
+<body style="text-align:center;">
+    <form action="">
+        <h1>Calculator</h1>
+        <a href="./formula.html">the formula</a>
+        <br><br>
+        <script>alert('请先选择您的课程数量\n此时默认课程数为13')</script>
+
+请选择课程数量：<SELECT name="课程数量选择：" onchange="window.open(this.options[this.selectedIndex].value,target='_self')">
+<OPTION value='./课程数对应1-15/1.html' >1</OPTION>
+<OPTION value='./课程数对应1-15/2.html' >2</OPTION>
+<OPTION value='./课程数对应1-15/3.html' >3</OPTION>
+<OPTION value='./课程数对应1-15/4.html' >4</OPTION>
+<OPTION value='./课程数对应1-15/5.html' >5</OPTION>
+<OPTION value='./课程数对应1-15/6.html' >6</OPTION>
+<OPTION value='./课程数对应1-15/7.html' >7</OPTION>
+<OPTION value='./课程数对应1-15/8.html' >8</OPTION>
+<OPTION value='./课程数对应1-15/9.html' >9</OPTION>
+<OPTION value='./课程数对应1-15/10.html' >10</OPTION>
+<OPTION value='./课程数对应1-15/11.html' >11</OPTION>
+<OPTION value='./课程数对应1-15/12.html' >12</OPTION>
+<OPTION value='./课程数对应1-15/13.html' selected >13</OPTION>
+<OPTION value='./课程数对应1-15/14.html' >14</OPTION>
+<OPTION value='./课程数对应1-15/15.html' >15</OPTION>
+</SELECT>
+
+
+<br><hr><br>
+课程01:<input type="text" placeholder="输入学分" value="" id="01"> <input type="text" placeholder="输入期末成绩" value="" id="q01"><br>
+课程02:<input type="text" placeholder="输入学分" value="" id="02"> <input type="text" placeholder="输入期末成绩" value="" id="q02"><br>
+课程03:<input type="text" placeholder="输入学分" value="" id="03"> <input type="text" placeholder="输入期末成绩" value="" id="q03"><br>
+课程04:<input type="text" placeholder="输入学分" value="" id="04"> <input type="text" placeholder="输入期末成绩" value="" id="q04"><br>
+课程05:<input type="text" placeholder="输入学分" value="" id="05"> <input type="text" placeholder="输入期末成绩" value="" id="q05"><br>
+课程06:<input type="text" placeholder="输入学分" value="" id="06"> <input type="text" placeholder="输入期末成绩" value="" id="q06"><br>
+课程07:<input type="text" placeholder="输入学分" value="" id="07"> <input type="text" placeholder="输入期末成绩" value="" id="q07"><br>
+课程08:<input type="text" placeholder="输入学分" value="" id="08"> <input type="text" placeholder="输入期末成绩" value="" id="q08"><br>
+课程09:<input type="text" placeholder="输入学分" value="" id="09"> <input type="text" placeholder="输入期末成绩" value="" id="q09"><br>
+课程10:<input type="text" placeholder="输入学分" value="" id="10"> <input type="text" placeholder="输入期末成绩" value="" id="q10"><br>
+课程11:<input type="text" placeholder="输入学分" value="" id="11"> <input type="text" placeholder="输入期末成绩" value="" id="q11"><br>
+课程12:<input type="text" placeholder="输入学分" value="" id="12"> <input type="text" placeholder="输入期末成绩" value="" id="q12"><br>
+课程13:<input type="text" placeholder="输入学分" value="" id="13"> <input type="text" placeholder="输入期末成绩" value="" id="q13"><br><br>
+<input type="reset" value="全部重置">
+<button onclick="getinput()">计算平均绩点</button>
+<script>
+    function getinput()
+    {
+        //学分
+        var xf01=document.getElementById('01').value;
+        var xf02=document.getElementById('02').value;
+        var xf03=document.getElementById('03').value;
+        var xf04=document.getElementById('04').value;
+        var xf05=document.getElementById('05').value;
+        var xf06=document.getElementById('06').value;
+        var xf07=document.getElementById('07').value;
+        var xf08=document.getElementById('08').value;
+        var xf09=document.getElementById('09').value;
+        var xf10=document.getElementById('10').value;
+        var xf11=document.getElementById('11').value;
+        var xf12=document.getElementById('12').value;
+        var xf13=document.getElementById('13').value;
+        var sumxf=parseFloat(xf01)+parseFloat(xf02)+parseFloat(xf03)+parseFloat(xf04)+parseFloat(xf05)+parseFloat(xf06)+parseFloat(xf07)+parseFloat(xf08)+parseFloat(xf09)+parseFloat(xf10)+parseFloat(xf11)+parseFloat(xf12)+parseFloat(xf13);
+        
+        //期末成绩
+        var qm01=document.getElementById('q01').value;
+        var qm02=document.getElementById('q02').value;
+        var qm03=document.getElementById('q03').value;
+        var qm04=document.getElementById('q04').value;
+        var qm05=document.getElementById('q05').value;
+        var qm06=document.getElementById('q06').value;
+        var qm07=document.getElementById('q07').value;
+        var qm08=document.getElementById('q08').value;
+        var qm09=document.getElementById('q09').value;
+        var qm10=document.getElementById('q10').value;
+        var qm11=document.getElementById('q11').value;
+        var qm12=document.getElementById('q12').value;
+        var qm13=document.getElementById('q13').value;
+        
+        //每一门学科的绩点
+        var jidian01=(parseFloat(qm01)-50)/10*parseFloat(xf01);
+        var jidian02=(parseFloat(qm02)-50)/10*parseFloat(xf02);
+        var jidian03=(parseFloat(qm03)-50)/10*parseFloat(xf03);
+        var jidian04=(parseFloat(qm04)-50)/10*parseFloat(xf04);
+        var jidian05=(parseFloat(qm05)-50)/10*parseFloat(xf05);
+        var jidian06=(parseFloat(qm06)-50)/10*parseFloat(xf06);
+        var jidian07=(parseFloat(qm07)-50)/10*parseFloat(xf07);
+        var jidian08=(parseFloat(qm08)-50)/10*parseFloat(xf08);
+        var jidian09=(parseFloat(qm09)-50)/10*parseFloat(xf09);
+        var jidian10=(parseFloat(qm10)-50)/10*parseFloat(xf10);
+        var jidian11=(parseFloat(qm11)-50)/10*parseFloat(xf11);
+        var jidian12=(parseFloat(qm12)-50)/10*parseFloat(xf12);
+        var jidian13=(parseFloat(qm13)-50)/10*parseFloat(xf13);
+        
+        //最后的平均绩点
+        var pinjunjidian=(jidian01+jidian02+jidian03+jidian04+jidian05+jidian06+jidian07+jidian08+jidian09+jidian10+jidian11+jidian12+jidian13)/sumxf;
+        alert('课程数：13\n'+'平均绩点为：'+pinjunjidian);
+    }
+</script>
+
+
+<input type="submit" value="提交后台生成表格">
+<br>
+<a href="../index.html">首页</a>
+<hr>    
+    </form>
+    <br><br><br><br><br>
+    <h4><a href="./log.html">development log</a></h4>
+</body>
+</html>

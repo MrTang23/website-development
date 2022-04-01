@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程数：1</title>
+</head>
+<body style="text-align:center;">
+    <form action="">
+        <h1>Calculator  课程数：1</h1>
+        <a href="../formula.html">the formula</a>
+        <br><br>
+
+    请选择课程数量：<SELECT name="课程数量选择：" onchange="window.open(this.options[this.selectedIndex].value,target='_self')">
+<OPTION value='../课程数对应1-15/1.html' selected>1</OPTION>
+<OPTION value='../课程数对应1-15/2.html' >2</OPTION>
+<OPTION value='../课程数对应1-15/3.html' >3</OPTION>
+<OPTION value='../课程数对应1-15/4.html' >4</OPTION>
+<OPTION value='../课程数对应1-15/5.html' >5</OPTION>
+<OPTION value='../课程数对应1-15/6.html' >6</OPTION>
+<OPTION value='../课程数对应1-15/7.html' >7</OPTION>
+<OPTION value='../课程数对应1-15/8.html' >8</OPTION>
+<OPTION value='../课程数对应1-15/9.html' >9</OPTION>
+<OPTION value='../课程数对应1-15/10.html' >10</OPTION>
+<OPTION value='../课程数对应1-15/11.html' >11</OPTION>
+<OPTION value='../课程数对应1-15/12.html' >12</OPTION>
+<OPTION value='../课程数对应1-15/13.html' >13</OPTION>
+<OPTION value='../课程数对应1-15/14.html' >14</OPTION>
+<OPTION value='../课程数对应1-15/15.html' >15</OPTION>
+
+</SELECT>
+
+<br><hr><br>
+课程01:<input type="text" placeholder="输入学分" value="" id="01"> <input type="text" placeholder="输入期末成绩" value="" id="q01"><br><br>
+
+<input type="reset" value="全部重置">
+<button onclick="getinput()">计算平均绩点</button>
+<script>
+    function getinput()
+    {
+        //学分
+        var xf01=document.getElementById('01').value;
+        var sumxf=parseFloat(xf01);
+        
+        //期末成绩
+        var qm01=document.getElementById('q01').value;
+ 
+        //每一门学科的绩点
+        var jidian01=(parseFloat(qm01)-50)/10*parseFloat(xf01);
+
+        //最后的平均绩点
+        var pinjunjidian=jidian01/sumxf;
+        alert('课程数：1\n'+'绩点为：'+pinjunjidian);
+    }
+</script>
+
+<input type="submit" value="提交后台生成表格">
+<br>
+<hr>
+<a href="../../index.html">首页</a>
+  
+    </form>
+    <br><br><br>
+    <h4><a href="../log.html">development log</a></h4>
+</body>
+</html>
