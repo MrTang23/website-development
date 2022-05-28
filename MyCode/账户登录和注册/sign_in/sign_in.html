@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in to MyCode</title>
+    <link rel="stylesheet" href="./style_sign_in.css">
+</head>
+<body>
+    <section>
+        <!-- 背景颜色 -->
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <!-- 背景圆 -->
+            <div class="circle" style="--x:0"></div>
+            <div class="circle" style="--x:1"></div>
+            <div class="circle" style="--x:2"></div>
+            <div class="circle" style="--x:3"></div>
+            <div class="circle" style="--x:4"></div>
+            <!-- 登录框 -->
+            <div class="container">
+                <div class="form">
+                    <h2 style="text-align:center;">Sign in to MyCode</h2>
+                    <hr>
+                    <form>
+                        <div class="inputBox">
+                            <input type="text" placeholder="UserName">
+                            <img src="../picture/userName.png" class="icon">
+                        </div>
+                       
+                        <div class="inputBox" id="box">
+                            <input type="password" placeholder="Password" id="pwd" class="text">
+                            <img src="../picture/eyeClose.png" id="eye" class="eye">
+                            <img src="../picture/password.png" class="icon">
+                        </div>
+                        <script>
+                            //1、获取元素
+                            var pwd = document.getElementById("pwd");
+                            var eye = document.getElementById("eye");
+                            var flag = 0;//默认眼睛是关上的
+                            //2、注册事件，定义事件处理程序
+                            eye.onclick = function () 
+                            {
+                                if (flag == 0) 
+                                {
+                                    //当眼睛是闭上的时候，点击后：
+                                    pwd.type = "text";//密码框样式换成文本，即可显示密码
+                                    eye.src = "../picture/eyeOpen.png";//图片地址修改为眼睛打开的图片
+                                    flag = 1;
+                                } 
+                                else 
+                                {
+                                    pwd.type = "password";//文本框换成密码框
+                                    eye.src = "../picture/eyeClose.png";//图片换成闭眼的
+                                    flag = 0;
+                                }
+                            }
+                        </script>
+                     
+                
+                        <div class="inputBox" style="text-align:center;">
+                            <input type="submit" value="Login">
+                            <hr>
+                        </div>
+                        <p class="forget">forget the password?<a href="#">
+                                request.
+                            </a></p>
+                        <p class="forget">new to MyCode?<a href="../sign_up/sign_up.html">
+                                sign up.
+                            </a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+

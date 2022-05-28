@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up for MyCode</title>
+    <link rel="stylesheet" href="./style_sign_up.css">
+    <script type="text/javascript" src="./eye.js"></script>
+</head>
+<body>
+    <section>
+        <!-- 背景颜色 -->
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <!-- 背景圆 -->
+            <div class="circle" style="--x:0"></div>
+            <div class="circle" style="--x:1"></div>
+            <div class="circle" style="--x:2"></div>
+            <div class="circle" style="--x:3"></div>
+            <div class="circle" style="--x:4"></div>
+            <!-- 登录框 -->
+            <div class="container">
+                <div class="form">
+                    <h2 style="text-align:center;">Sign up for MyCode</h2>
+                    <hr>
+                    <form>
+                        <div class="inputBox">
+                            <input type="text" placeholder="UserName">
+                            <img src="../picture/userName.png" class="icon">
+                        </div>
+                        <div class="inputBox">
+                            <input type="e-mail" placeholder="E-mail">
+                            <img src="../picture/email.png" class="icon">
+                        </div>
+                        <div class="inputBox" id="box">
+                            <input type="password" placeholder="Password" class="text">
+                            <img src="../picture/eyeClose.png" id="eye" class="eye">
+                            <img src="../picture/password.png" class="icon">
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" placeholder="Confirm New Password">
+                            <img src="../picture/eyeClose.png" id="eye" class="eye">
+                            <img src="../picture/repeat.png" class="icon">
+                        </div>
+                        <div class="inputBox" style="text-align:center;">
+                            <input type="button" value="Next" onclick="window.open('./sendEmail.html')">
+                            <hr>
+                        </div>
+                        <p class="forget">have an account?<a href="../sign_in/sign_in.html">
+                                sign in.
+                            </a></p>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
